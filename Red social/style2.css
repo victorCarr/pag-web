@@ -1,0 +1,210 @@
+
+body {font-family: 'Source Sans Pro', sans-serif !important;}
+
+body, p {margin: 0 !important; padding: 0;}
+
+.contenedor {width: 100%;}
+
+.itemHeader {grid-area: header; background-color: white; display: flex; justify-content: space-between; position: sticky; 
+    top: 0px; z-index: 1; box-shadow: 0 0.5px 5px gray;}
+.itemLeft {grid-area: left; padding: 20px 50px 20px 20px;}
+.itemFeed {grid-area: feed; display:flex; flex-direction: column; align-items: center;} 
+.itemRight {grid-area: right; padding: 20px 20px 20px 50px; flex-direction: column;}
+
+.itemLeft, .itemFeed, .itemRight {background-color: #f0f2f5;}
+
+.itemLeft, .itemRight 
+{
+    width: 25vw;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+}
+
+.grid-container
+{
+    display: grid;
+    grid-template-areas: 
+    'header header header'
+    'left feed right';
+}
+
+.leftHeader, .centerHeader, .rightHeader
+{
+    display: flex; 
+    width: 33%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.titulo
+{
+	color:#495995;
+	font-size:2em;
+	margin:15px 0 10px 200px;
+    display: none;
+}
+
+.logo {margin: 10px 20px 10px 30px;}
+
+.inputBuscar {width: 15vw !important;}
+
+.btn-outline-success
+{
+    border-color: #495995 !important;
+    color: #495995 !important;
+}
+
+.btn-outline-success:hover 
+{
+    background-color: #495995 !important;
+    color: white !important;
+}
+
+.iconos {display: flex; align-items: center; width: 66%; justify-content: space-around;}
+
+.btnMenu, .btnContacts, .btnBuscar {display: none;}
+
+.perfil, #perfilTabla
+{
+    display:flex; 
+    align-items: center; 
+}
+
+#perfilTabla > p {padding-left: 10px;}
+
+.perfil {justify-content: center;}
+
+.tarjeta, .birthday {background-color: white;}
+
+.tarjeta {width: 80%; }
+
+.birthday > p {display: inline-block; padding-left: 10px;}
+
+.historias 
+{
+    display: flex;
+    width: 45vw;
+    padding: 20px 0 0 0;
+    margin-bottom: 20px;
+    overflow-x: auto;
+}
+
+.imagen 
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.imagen > input
+{
+    padding: 0 5px 0 5px;
+    border-radius: 20px;
+}
+
+.publicar, .footerTarjeta {display: flex;}
+
+.publicar {flex-direction: column; align-items: center;}
+
+.publicar > div, .footerTarjeta > div {padding: 5px;}
+
+.textoPublicar 
+{
+    background-color: #f0f2f5;
+    border-radius: 20px;
+    border-style: none;
+    width: 90%;
+    height: 40px;
+    padding-left: 20px;
+}
+
+.footerTarjeta 
+{
+    width: 100%; 
+    justify-content: space-around; 
+    margin: 20px 0 0 0;
+    border-top: 2px solid #f0f2f5;
+}
+
+
+/*----------------- Media query para tablets ----------------------*/
+
+@media screen and (min-width:750px) and (max-width:1100px) 
+{
+    .grid-container
+    {
+        grid-template-areas: 
+        'header'
+        'feed';
+    }    
+
+    .itemLeft, .itemRight, .logo {display: none;}
+    
+    .titulo {display:block; margin: 0 20px 0 20px;}
+
+    .inputBuscar {width: 40vw !important;}
+
+    .btnBuscar {display: none;}
+
+    .itemHeader {flex-direction: column;}
+
+    .leftHeader {width: 100%; justify-content: space-between;}
+
+    .centerHeader, .rightHeader {width: 43%;}
+
+    .btnContacts {display: flex; justify-content: center; width: 10%;}
+
+    .btnMenu {display: flex; justify-content:center; width: 14%;}
+
+    .iconos {width: 100%;}
+
+    .historias {width: 85vw;}
+}
+
+
+/* ---------------- Media query para smartphones ----------------*/
+
+@media screen and (min-width:200px) and (max-width:749px)
+{
+    .grid-container
+    {
+        grid-template-areas: 
+        'header'
+        'feed';
+    }    
+
+    .itemLeft, .itemRight, .logo {display: none;}
+    
+    .titulo {display:block; margin: 0 20px 0 20px;}
+
+    .form-inline {display: none !important;}
+
+    .itemHeader {flex-direction: column;}
+
+    .leftHeader {width: 100%; justify-content: space-between;}
+
+    .centerHeader, .rightHeader {width: 43%;}
+
+    .btnBuscar, .btnContacts {display: block;}
+
+    .btnsBC {display: flex; justify-content: space-around; width: 30%;}
+
+    .btnMenu {display: flex; justify-content:center; width: 14%;}
+
+    .iconos {width: 100%;}
+
+    .historias {width: 100vw; margin: 15px 0 15px 0; padding-top: 10px; background-color: white;}
+
+    .tarjeta {width: 95%;}
+
+    .iconos input, .footerTarjeta input {width: auto !important; height: 22px !important;}
+
+    .rightHeader p {font-size: 0.7em;}
+
+    #perfilHeader {width: auto !important; height: 25px !important;}
+
+    .footerTarjeta {font-size: 0.7em; margin-top: 10px;}
+
+    #btnLike {width: auto; height: 20px;}
+} 

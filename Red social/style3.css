@@ -1,0 +1,324 @@
+
+body {font-family: 'Source Sans Pro', sans-serif !important;}
+
+body, p {margin: 0 !important; padding: 0;}
+
+.contenedor 
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header 
+{
+    width: 100%;
+    background-color: white; 
+    display: flex; 
+    justify-content: space-between; 
+    position: sticky; 
+    top: 0px; 
+    z-index: 2; 
+    box-shadow: 0 0.5px 5px gray;
+}
+
+.leftHeader, .centerHeader, .rightHeader
+{
+    display: flex; 
+    width: 33%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.titulo
+{
+	color:#495995;
+	font-size:2em;
+	margin:15px 0 10px 200px;
+    display: none;
+}
+
+.logo {margin: 10px 20px 10px 30px;}
+
+.inputBuscar {width: 15vw !important;}
+
+.btn-outline-success
+{
+    border-color: #495995 !important;
+    color: #495995 !important;
+}
+
+.btn-outline-success:hover 
+{
+    background-color: #495995 !important;
+    color: white !important;
+}
+
+.iconos {display: flex; align-items: center; width: 66%; justify-content: space-around;}
+
+.btnMenu, .btnContacts, .btnBuscar {display: none;}
+
+.perfil, #perfilTabla
+{
+    display:flex; 
+    align-items: center; 
+}
+
+#perfilTabla > p {padding-left: 10px;}
+
+.perfil {justify-content: center;}
+
+.cuerpo1 
+{
+    background-color: white;
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 0.5px 5px gray;
+    z-index: 1;
+}
+
+.fotoPerfilPortada
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+}
+
+.fotoPortada
+{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    border-radius: 0 0 15px 15px;
+}
+
+.contenedorPerfilEdit 
+{
+    display: flex; 
+    width: 100%;
+    height: 50%;
+    justify-content: space-between;
+}
+
+.fotoPerfil 
+{
+    display: flex;
+    width: 70%;
+    align-items: center;
+}
+
+#fotoBiografia {width: auto; height: 100%;}
+
+#nombreBiografia {display: flex; flex-direction: column;}
+
+#nombrePerfil {font-size: 2em;}
+
+#textAmigos {color: gray;}
+
+.btnEdit
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+}
+
+.cuerpo2
+{
+    background-color: #f0f2f5;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.cuerpoFeed {width: 75%;}
+
+.feed
+{
+    display: flex; 
+    padding-top: 20px;
+}
+
+.itemLeft 
+{
+    width: 40%;
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+}
+
+.itemRight 
+{
+    width: 60%;
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+}
+
+.tarjeta {width: 95%; background-color: white;}
+
+.info, .publicar, .footerTarjeta {display: flex;}
+
+.info {flex-direction: column; align-items: initial;}
+
+.info > div, .info > p {padding: 5px;}
+
+.info p {padding-left: 10px;}
+
+.titulosLeft {font-size: 1.5em;}
+
+.grid-fotos
+{
+    display: grid;
+    grid-template-rows: 33% 33% 33%;
+    grid-template-columns: 33% 33% 33%;
+}
+
+.grid-friends 
+{
+    display: grid;
+    grid-template-rows: 33% 33% 33%;
+    grid-template-columns: 33% 33% 33%;
+}
+
+.box-fotos, .box-friends
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box-fotos {padding: 2px;}
+
+.box-friends {margin: 3px; flex-direction: column;}
+
+.box-friends p {padding: 0; font-size: 0.9em;}
+
+.publicar {flex-direction: column; align-items: center;}
+
+.publicar > div, .footerTarjeta > div {padding: 5px;}
+
+.textoPublicar 
+{
+    background-color: #f0f2f5;
+    border-radius: 20px;
+    border-style: none;
+    width: 90%;
+    height: 40px;
+    padding-left: 20px;
+}
+
+.footerTarjeta 
+{
+    width: 100%; 
+    justify-content: space-around; 
+    margin: 20px 0 0 0;
+    border-top: 2px solid #f0f2f5;
+}
+
+
+
+/* --------------------- Media query para tablets -------------------*/
+
+@media screen and (min-width: 750px) and (max-width: 1100px) 
+{
+    .cuerpo1 {height: 40vh;}
+
+    .logo {display: none;}
+    
+    .titulo {display:block; margin: 0 20px 0 20px;}
+
+    .inputBuscar {width: 40vw !important;}
+
+    .btnBuscar {display: none;}
+
+    .header {flex-direction: column;}
+
+    .leftHeader {width: 100%; justify-content: space-between;}
+
+    .centerHeader, .rightHeader {width: 43%;}
+
+    .btnContacts {display: flex; justify-content: center; width: 10%;}
+
+    .btnMenu {display: flex; justify-content:center; width: 14%;}
+
+    .iconos {width: 100%;}
+
+    .fotoPerfilPortada {width: 85%;}
+
+    .cuerpoFeed {width: 80%;}
+
+    .feed {flex-direction: column; align-items: center;}
+
+    .itemLeft {width: 80%;}
+    
+    .itemRight {width: 100%;}
+}
+
+
+
+/* ------------------ Media query para smartphones ------------------------*/
+
+@media screen and (min-width: 200px) and (max-width: 749px)
+{
+
+    .logo {display: none;}
+    
+    .titulo {display:block; margin: 0 20px 0 20px;}
+
+    .form-inline {display: none !important;}
+
+    .header {flex-direction: column;}
+
+    .leftHeader {width: 100%; justify-content: space-between;}
+
+    .centerHeader, .rightHeader {width: 43%;}
+
+    .btnBuscar, .btnContacts {display: block;}
+
+    .btnsBC {display: flex; justify-content: space-around; width: 30%;}
+
+    .btnMenu {display: flex; justify-content:center; width: 14%;}
+
+    .iconos {width: 100%;}
+
+    .iconos input, .footerTarjeta input {width: auto !important; height: 22px !important;}
+
+    .rightHeader p {font-size: 0.7em;}
+
+    #perfilHeader {width: auto !important; height: 25px !important;}
+
+    .cuerpo1 {height: auto;}
+
+    .fotoPerfilPortada {width: 90%;}
+
+    .contenedorPerfilEdit {flex-direction: column; height: 65%; align-items: center;}
+
+    .fotoPerfil {flex-direction: column; width: 100%; align-items: center;}
+
+    #fotoBiografia {width: 40%; height: auto;}
+
+    #nombreBiografia {align-items: center;}
+
+    #nombrePerfil {font-size: 1.5em;}
+
+    .btnEdit {width: 50%; margin: 15px 0 15px 0;}
+
+    .cuerpoFeed {width: 95%;}
+
+    .feed {flex-direction: column; align-items: center;}
+
+    .itemLeft {width: 100%;}
+    
+    .itemRight {width: 100%;}
+
+    .titulosLeft {font-size: 1.2em;}
+
+    .footerTarjeta {font-size: 0.7em; margin-top: 10px;}
+
+    #btnLike {width: auto; height: 20px;}
+}

@@ -1,0 +1,218 @@
+
+body {font-family: 'Source Sans Pro', sans-serif;}
+
+body, p, h1
+{
+	margin:0;
+	padding:0;
+}
+
+.contenedor {width:100%;}
+
+.itemHeader {grid-area: header; background-color: #495995; display: flex; justify-content: space-between;}
+.itemLeft {grid-area: left; text-align: center; padding:7em 2em 2em 2em}
+.itemRight {grid-area: right; padding:2em 7em 2em 0;}
+.itemFooter {grid-area: footer; text-align: center;}
+
+.itemLeft, .itemRight {background:linear-gradient(to bottom, white, #d4d7e6);}
+
+.grid-container
+{
+    display: grid;
+    grid-template-areas: 
+    'header header'
+    'left right'
+    'footer footer';
+}
+
+.titulo
+{
+	color:white;
+	font-size:2.5em;
+	margin:15px 0 10px 200px;
+}
+
+.infoLogin
+{
+    display: flex;
+    margin: 10px 60px 10px 0;
+}
+
+.input {margin: 0 20px 0 0;}
+
+.input p {font-size:0.8em;}
+
+.btnEntrar {background-color:#5a6db1;}
+
+.input, .btnEntrar
+{
+    color: white;
+    font-size: 1em;
+}
+
+a {margin-top: 20px;}
+
+a:link, a:visited, a:hover, a:active {
+  color: white;
+  text-decoration: none;
+}
+
+.textoImg
+{
+    color:#3e4658;
+	font-size:1.5em;
+}
+
+.inputName
+{
+	width:230px;
+	height:30px;
+	margin:0 5px 10px 0;
+	font-size:1em;
+}
+
+.inputMail
+{
+	width:476px;
+	height:30px;
+	margin:0 0 10px 0;
+	font-size:1em;
+}
+
+.date
+{
+	margin:5px 0 10px 0; 
+	font-family:sans-serif; 
+	color:gray;
+}
+
+.gender {margin-left:10px;}
+
+.textoCond
+{
+    color: gray;
+    width: 476px;
+}
+
+.btnRegistro
+{
+	background:linear-gradient(to bottom, #8eb16c, #67864a);
+	border-radius:5px;
+	color:white;
+	width:180px;
+	height:40px;
+	font-size:1em;
+}
+
+
+/*-------------Media query para tablets-----------------------*/
+
+@media screen and (min-width:750px) and (max-width:1100px)
+{
+    .itemHeader, .infoLogin
+    {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .grid-container
+    {
+        grid-template-areas: 
+        'header'
+        'right'
+        'footer';
+    }
+
+    .itemRight
+    {
+        margin: 0;
+        padding: 20px 0 20px 20%;
+        font-size: 1.2em;
+    }
+
+    .itemLeft {display: none;}
+
+    .titulo {font-size: 4em;}
+
+    .infoLogin {margin: 0 0 20px 0;}
+
+    .input > input
+    {
+        width: 40vw;
+        height: 30px;
+        font-size: 0.8em;
+    }
+
+    .input, .titulo {margin: 20px 0 0 0;}
+
+    .input, .btnEntrar {font-size: 1.5em;}
+
+    .date
+    {
+        width: 150px;
+        height: 30px;
+        font-size: 0.8em;
+    }
+
+    .btnRegistro {margin-left: 23%;}
+}
+
+
+
+/*-------------Media query para smartphones-----------------------*/
+
+@media screen and (min-width:200px) and (max-width:749px)
+{
+    .itemHeader, .infoLogin
+    {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .grid-container
+    {
+        grid-template-areas: 
+        'header'
+        'right'
+        'footer';
+    }
+
+    .itemRight
+    {
+        margin: 0;
+        padding: 10% 0 20px 10%;
+        font-size: 1em;
+    }
+
+    .itemLeft {display: none;}
+
+    .titulo
+    {
+        margin: 20px 0 20px 0;
+        font-size: 2.5em;
+    }
+
+    .infoLogin, .input {margin: 0 0 20px 0;}
+
+    .input > input
+    {
+        width: 75vw;
+        height: 30px;
+        font-size: 1em;
+    }
+
+    .input {font-size: 1em;}
+
+    .btnEntrar {font-size: 1.4em;}
+
+    .inputMail, .textoCond {width: 90%;}
+
+    .date
+    {
+        width: 150px;
+        height: 30px;
+        font-size: 0.8em;
+    }
+
+    .btnRegistro {margin-left: 15%;}
+}
